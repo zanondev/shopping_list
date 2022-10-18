@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de compras</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <a
+          title="Pagina principal"
+          href="index.html"
+          class="nav-link navbar-brand"
+        >
+          <iconify-icon
+            class="icon-car"
+            icon="emojione:shopping-cart"
+          ></iconify-icon>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active"></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-index">
+      <div class="container-form">
+        <div class="row">
+          <div class="col-2">
+            <label for="itemName">Nome:</label>
+          </div>
+          <div class="col-2">
+            <input
+              id="itemName"
+              placeholder="Ex: Cerveja"
+              title="Inserir nome"
+              type="text"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-2">
+            <label for="itemPrice">Preço:</label>
+          </div>
+          <div class="col-2">
+            <input
+              id="itemPrice"
+              title="Inserir preço"
+              placeholder="Ex: 5.99"
+              type="number"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-2">
+            <label for="itemQuantity">Quantidade:</label>
+          </div>
+          <div class="col-2">
+            <input
+              id="itemQuantity"
+              title="Inserir quantidade"
+              placeholder="Ex: 3"
+              type="number"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row mt-2 add-item">
+          <div class="col-1">
+            <button type="button" id="btn-add"  onclick="product.registerProduct()" class="btn btn-success">Adicionar</button>
+            <!-- <input
+              type="button"
+              title="Adicionar"
+              id="btn-add"
+              onclick="product.registerProduct()"
+              class="btn btn-success"
+              value="Adicionar"
+            /> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="container-list">
+        <div class="row mt-2">
+          <div class="col-12">
+            <h4>LISTA DE COMPRAS:</h4>
+            <table class="table table-dark table-striped">
+              <thead>
+                <div class="cabecalho-notas">
+                  <tr>
+                    <th scope="col">ITEM</th>
+                    <th scope="col">NOME</th>
+                    <th scope="col">PREÇO</th>
+                    <th scope="col">AÇÃO</th>
+                  </tr>
+                </div>
+              </thead>
+              <tbody id="tbody">
+                <tr>
+                </tr>
+              </tbody id="tbody">
+            </table>
+            <div class="total">
+              <p class="total-text">Total:</p>
+              <p class="total-price" id="itemTotal"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts/script.js"></script>
+
+  </body>
+</html>
